@@ -1,0 +1,135 @@
+/* Header styles */
+header {
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 60px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header img {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Benefits section styles */
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.benefit {
+    text-align: center;
+    max-width: 300px;
+}
+
+/* Features section styles */
+.features {
+    padding: 40px;
+}
+
+.features ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Review section styles */
+.reviews {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.review-card {
+    text-align: center;
+    max-width: 300px;
+}
+
+/* CTA section styles */
+.cta {
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 40px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Default styles for the benefits section */
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.benefit {
+    text-align: center;
+    max-width: 300px;
+}
+
+/* Responsive styles for the benefits section */
+@media screen and (max-width: 768px) {
+    .benefits {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .benefit {
+        margin-bottom: 30px; /* Add spacing between items */
+    }
+}
+
+/* Default styles for the review section */
+.reviews {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.review-card {
+    text-align: center;
+    max-width: 300px;
+}
+
+/* Responsive styles for the reviews section */
+@media screen and (max-width: 768px) {
+    .reviews {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .review-card {
+        margin-bottom: 30px; /* Add spacing between review cards */
+    }
+}
