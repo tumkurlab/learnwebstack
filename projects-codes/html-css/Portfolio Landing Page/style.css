@@ -1,0 +1,159 @@
+/* Add a background color and adjust padding for the header */
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* Style the header text */
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Style the profile image */
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Add hover effect to navigation links */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Style the sections with a subtle background color and padding */
+section {
+    background-color: #f9f9f9;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the section headings */
+section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Style the project list with icons */
+ul.projects {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.projects li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+ul.projects li::before {
+    content: "\2022"; /* Bullet character */
+    color: #007BFF; /* Bullet color */
+    font-size: 16px;
+    position: absolute;
+    left: -20px;
+    top: 6px;
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style table headers */
+th {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style table data cells */
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Add zebra striping to table rows for better readability */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style form labels */
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style text input fields */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style the submit button */
+form input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Style links in the footer */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
