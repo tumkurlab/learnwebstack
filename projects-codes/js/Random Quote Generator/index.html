@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .generator {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .quote {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Small screens (mobile) */
+        @media (max-width: 600px) {
+            .generator {
+                width: 80%;
+            }
+        }
+
+        /* Medium screens (tablets) */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .generator {
+                width: 60%;
+            }
+        }
+
+        /* Large screens (desktop) */
+        @media (min-width: 1025px) {
+            .generator {
+                width: 400px;
+            }
+        }
+    </style>
+    <title>Random Quote Generator</title>
+</head>
+<body>
+    <div class="generator">
+        <div class="quote" id="quote">
+            "Your random quote will appear here."
+        </div>
+        <button id="generate">Generate Quote</button>
+    </div>
+    <script>
+        // Select elements from the DOM
+        const quoteDisplay = document.getElementById("quote");
+        const generateButton = document.getElementById("generate");
+
+        // Array of random quotes
+        const quotes = [
+            "The only limit to our realization of tomorrow will be our doubts of today. – Franklin D. Roosevelt",
+            "The best way to predict the future is to create it. – Peter Drucker",
+            "In the middle of every difficulty lies opportunity. – Albert Einstein",
+            "Don’t watch the clock; do what it does. Keep going. – Sam Levenson",
+            "You are never too old to set another goal or to dream a new dream. – C.S. Lewis",
+            "The secret of getting ahead is getting started. – Mark Twain",
+            // Add more quotes here
+        ];
+
+        // Function to generate a random quote
+        function generateRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteDisplay.textContent = quotes[randomIndex];
+        }
+
+        // Add event listener to the generate button
+        generateButton.addEventListener("click", generateRandomQuote);
+
+        // Generate an initial quote
+        generateRandomQuote();
+    </script>
+</body>
+</html>
