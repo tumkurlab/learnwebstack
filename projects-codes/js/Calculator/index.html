@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .display {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: right;
+        }
+
+        input {
+            border: none;
+            background: none;
+            width: 100%;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        button {
+            border: none;
+            background: none;
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Small screens (mobile) */
+        @media (max-width: 600px) {
+            .calculator {
+                width: 80%;
+            }
+        }
+
+        /* Medium screens (tablets) */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .calculator {
+                width: 60%;
+            }
+        }
+
+        /* Large screens (desktop) */
+        @media (min-width: 1025px) {
+            .calculator {
+                width: 400px;
+            }
+        }
+    </style>
+    <title>Responsive Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="result" value="0" readonly>
+        </div>
+        <div class="buttons">
+            <!-- Buttons will be added here using JavaScript -->
+        </div>
+    </div>
+    <script>
+        // Select the display input field
+        const display = document.getElementById("result");
+
+        // Function to update the display
+        function updateDisplay(value) {
+            display.value = value;
+        }
+
+        // Function to create buttons
+        function createButton(label) {
+            const button = document.createElement("button");
+            button.textContent = label;
+            return button;
+        }
+
+        // Add event listeners to buttons
+        const buttonContainer = document.querySelector(".buttons");
+
+        const buttonLabels = [
+            "7", "8", "9", "/",
+            "4", "5", "6", "*",
+            "1", "2", "3", "-",
+            "0", "C", "=", "+"
+        ];
+
+        buttonLabels.forEach(label => {
+            const button = createButton(label);
+            button.addEventListener("click", () => {
+                if (label === "=") {
+                    try {
+                        updateDisplay(eval(display.value));
+                    } catch (error) {
+                        updateDisplay("Error");
+                    }
+                } else if (label === "C") {
+                    updateDisplay("0");
+                } else {
+                    if (display.value === "0") {
+                        updateDisplay(label);
+                    } else {
+                        updateDisplay(display.value + label);
+                    }
+                }
+            });
+
+            buttonContainer.appendChild(button);
+        });
+    </script>
+</body>
+</html>
